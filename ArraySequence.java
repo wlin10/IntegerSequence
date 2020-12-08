@@ -32,8 +32,10 @@ public class ArraySequence implements IntegerSequence{
   }
 
   public ArraySequence(IntegerSequence otherseq){
+    this.currentIndex = 0;
     if (otherseq.hasNext()) {
       data[currentIndex] = otherseq.next();
+      currentIndex++;
     }
   }
 
