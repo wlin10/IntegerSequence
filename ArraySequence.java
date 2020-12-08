@@ -19,7 +19,7 @@ public class ArraySequence implements IntegerSequence{
     return data.length;
   }
   public boolean hasNext(){
-    return (currentIndex <= length());
+    return (currentIndex < length());
   }
   public int next(){
     if (hasNext()) {
