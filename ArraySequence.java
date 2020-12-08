@@ -14,13 +14,13 @@ public class ArraySequence implements IntegerSequence{
     this.currentIndex = 0;
   }
   public int length(){
-
+    return data.length;
   }
   public boolean hasNext(){
-
+    return (currentIndex <= length());
   }
   public int next(){
-    
+
   }
 
   public ArraySequence(IntegerSequence otherseq){
