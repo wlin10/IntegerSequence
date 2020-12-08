@@ -20,7 +20,13 @@ public class ArraySequence implements IntegerSequence{
     return (currentIndex <= length());
   }
   public int next(){
-
+    if (hasNext()) {
+      int temp = data[currentIndex];
+      currentIndex++;
+      return temp;  
+    } else {
+      throw new NoSuchElementException ("No more values left.");
+    }
   }
 
   public ArraySequence(IntegerSequence otherseq){
