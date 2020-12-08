@@ -1,22 +1,24 @@
 import java.util.NoSuchElementException;
 public class Range implements IntegerSequence{
   private int start,end,current;
-  public Range(int start,  int end){  }
-  public void reset(){  }
-  public int length(){  }
-  public boolean hasNext(){  }
+  public Range(int start, int end){
+    this.start = start;
+    this.end = end;
+  }
+  public void reset(){
 
-  //@throws NoSuchElementException
-  public int next(){    }
+  }
+  public int length(){
+    return (end - start + 1);
+  }
+  public boolean hasNext(){
 
-}
-
-How to use this?
-
-    IntegerSequence r = new Range(10,20);
-    while(r.hasNext()){
-      System.out.print(r.next())
-       if( r.hasNext() )
-          System.out.print( ", " );
+  }
+  public int next(){
+    if (hasNext()) {
+      return current;
+    } else {
+      throw new NoSuchElementException ("No more values left.");
     }
-    System.out.println();
+  }
+}
