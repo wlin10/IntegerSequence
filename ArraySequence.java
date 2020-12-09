@@ -39,8 +39,8 @@ public class ArraySequence implements IntegerSequence{
         data[currentIndex] = otherseq.next();
         currentIndex++;
       }
-      reset();
       otherseq.reset();
+      reset();
     }
 
 }
